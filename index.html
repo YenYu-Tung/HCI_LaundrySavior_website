@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">        
+        <script type="text/javascript" src="js/lib/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+        <title>Timothy Chen</title>
+    </head>
+    <body>
+        <script>
+            $(document).ready(function () {
+                $('.banner').find('.transparentOnStart').each(function (i) {
+                    $(this).delay(i * 200).animate({ opacity: 100 })
+                })
+                $(".logo, .nav-item").each(function (index) {
+                    let nav = $(this)
+                    let target = $(nav.attr('to'))
+                    let sectionTop = target.offset().top
+                    nav.click(function () {
+                        $("html, body").animate({scrollTop: sectionTop})
+                    })
+                })
+                window.addEventListener("scroll", (e) => {
+                    let windowCenter = window.scrollY + window.innerHeight / 2
+                    $('.nav-item').removeClass('active')
+                    $('.nav-item').each(function (index) {
+                        let nav = $(this)
+                        let target = $(nav.attr('to'))
+                        let sectionTop = target.offset().top
+                        let sectionBtm = sectionTop + target.innerHeight()
+                        if (windowCenter > sectionTop && windowCenter < sectionBtm) {
+                            nav.addClass('active')
+                        }
+                    })
+                    $('.section').each(function (index) {
+                        let section = $(this)
+                        let sectionTop = section.offset().top
+                        let sectionBtm = sectionTop + section.innerHeight()
+                        if (windowCenter > sectionTop && windowCenter < sectionBtm) {
+                            section.find('.transparentOnStart').each(function (i) {
+                                $(this).delay(i * 200).animate({ opacity: 100 })
+                            })
+                        }
+                    })
+                })
+            })
+        </script>
+        <div class="header overlay">
+            <div class="row">
+                <div class="logo" to="#Top">Timothy Chen</div>
+                <a class="nav-item" to="#About">About</a>
+                <a class="nav-item" to="#Experiences">Experiences</a>
+                <a class="nav-item" to="#Education">Education</a>
+                <a class="nav-item" to="#Research">Research</a>
+                <a class="nav-item" to="#Side-project">Side Projects</a>
+            </div>
+        </div>
+        <div id="Top" class="section banner">
+            <div class="container">
+                <div class="centered" id="top">
+                    <h1 class="name transparentOnStart">Timothy Chen</h1>
+                    <div class="intro transparentOnStart">A short greeting / intro sentence within 10 words.</div>
+                </div>
+            </div>
+        </div>
+        <div id="About" class="section about-section">
+            <div class="container">
+                <div class="col-left">
+                    <h2>About me</h2>                    
+                    <p class="about-text">
+                        Right now a master student at National Taiwan University, graduating in June, 2023. My research
+                        is mainly around computer vision, computer graphics and decentralized application on blockchain.
+                        I also have interest in theoretic topics such as typing theorem and computational logics
+                    </p>
+                    <button id="downloadBtn" class="btn-shadow transparentOnStart">Download CV ↓</button>
+
+                </div>
+                <div class="col-right">
+                    <div class="box">
+                        <div class="deco"></div>
+                        <div class="deco"></div>
+                        <div class="deco"></div>
+                        <div class="deco"></div>
+                        <div class="skill-table">
+                            <div class="table-header">Languages</div>
+                            <div class="table-header">Programming Languages</div>
+                            <div class="table-header">Library and Framework</div>
+                            <ul class="table-item">
+                                <li>Mandarin Chinese<br>native</li>
+                                <li>English<br>fluent, TOEFL iBT 107</li>
+                            </ul>
+                            <ul class="table-item">
+                                <li>C/C++ </li>
+                                <li>Java </li>
+                                <li>Python </li>
+                                <li>Matlab </li>
+                                <li>Haskell </li>
+                                <li>GO </li>
+                                <li>SQL </li>
+                                <li>Shell Script </li>
+                                <li>CUDA </li>
+                            </ul>
+                            <ul class="table-item">
+                                <li>PyTorch</li>
+                                <li>Tensorflow</li>
+                                <li>Standard Unix Lib</li>
+                                <li>Spring boot</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="Experiences" class="section experiences-section">
+            <div class="deco"></div>
+            <div class="deco"></div>
+            <div class="container">
+                <div class="col-left">
+                    <h2>Experiences</h2>
+                </div>
+                <div class="col-right">
+                    <ul class="timeline transparentOnStart">
+                        <li class="transparentOnStart">
+                            <div class="time">2020-NOW</div>
+                            <div class="title">STUDENT RESEARCH ASSISTANT, NATIONAL TAIWAN UNIVERSITY</div>
+                            <div class="content">
+                                Under supervision of Prof. Yi-Ping Hung. Main field of research is computer vision,
+                                namely visual odometry. Also involved in web development project utilizing decentralized
+                                application and blockchain.
+                            </div>
+                        </li>
+                        <li class="transparentOnStart">
+                            <div class="time">SPRING 2022</div>
+                            <div class="title">TEACHING ASSISTANT, NATIONAL TAIWAN UNIVERSITY</div>
+                            <div class="content">Course: Probability</div>
+                        </li>
+                        <li class="transparentOnStart">
+                            <div class="time">SUMMER 2022</div>
+                            <div class="title">TEACHING ASSISTANT, ACADEMIA SINICA AND NATIONAL TAIWAN UNIVERSITY</div>
+                            <div class="content">Course: Formosan Summer School on Logic, Language, and Computation
+                            </div>
+                        </li>
+                        <li class="transparentOnStart">
+                            <div class="time">AUG 2021-MAR 2022</div>
+                            <div class="title">INTERN, CHINATRUST COMMERCIAL BANK</div>
+                            <div class="content">
+                                Worked as summer and semester intern on development and optimization for
+                                continuous training for AI model that is dedicated to check identification and
+                                verification.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div id="Education" class="section education-section">
+            <div class="deco"></div>
+            <div class="deco"></div>
+            <div class="container">
+                <div class="col-left">
+                    <h2>Education</h2>
+                </div>
+                <div class="col-right">
+                    <ul class="timeline">
+                        <li class="transparentOnStart">
+                            <div class="time">2022-NOW</div>
+                            <div class="title">Master of Science, Department of Computer Science and Information
+                                Engineering
+                            </div>
+                            <div class="content">National Taiwan University, Taiwan
+                            </div>
+                            <div class="content">GPA 4.30</div>
+                        </li>
+                        <li class="transparentOnStart">
+                            <div class="time">2018-2022</div>
+                            <div class="title">Bachelor of Science, Department of Computer Science and Information
+                                Engineering</div>
+                            <div class="content">National Taiwan University, Taiwan</div>
+                            <div class="content">GPA 3.93</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="Research" class="section research-section">
+            <div class="container">
+                <div class="box">
+                    <div class="deco"></div>
+                    <div class="deco"></div>
+                    <div class="deco"></div>
+                    <div class="deco"></div>
+                    <h2>Research</h2>
+                    <div class="box-grid transparentOnStart">
+                        <div class="research-item">
+                            <div class="title">Performance on image matching and camera localization using different
+                                features</div>
+                            <p class="desc">Comparing both computation cost and the accuracy of camera pose estimation
+                                using different kind of feature extraction
+                                methods.
+                            </p>
+                            <a href="" class="link">View Result ↗</a>
+                        </div>
+                        <div class="research-item">
+                            <div class="title">Indoor localization using fusion of vision, IMU and UWB
+                            </div>
+                            <p class="desc">By fusing the result of different sensor, developed a better method for
+                                positioning unmanned aerial vehicles.
+                            </p>
+                            <a href="" class="link">View Result ↗</a>
+                        </div>
+                        <div class="research-item">
+                            <div class="title">General framework on enhancing existing NFTs.</div>
+                            <p class="desc">Develop a platform for NFT creators to easily provide service, privilege
+                                or product
+                                exclusively for owners.
+                            </p>
+                            <div class="tag">On-going.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Publication" class="section publication-section">
+            <div class="container">
+                <div>
+                    <h2>Publication</h2>
+                    <a href="slides/team02_10_LaundrySavior_Hi-fi Prototype(I)_slides.pdf">Report</a>
+                    <div class="shadow-box transparentOnStart">
+                        <p>
+                            Kao, Peng-Yuan, Rong-Rong Zhang, Timothy Chen, and Yi-Ping Hung. "Absolute Camera Pose
+                            Regression Using an RGB-D Dual-Stream Network and Handcrafted Base Poses." Sensors 22, no.
+                            18 (2022): 6971.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Side-project" class="section side-project-section">
+            <div class="container">
+                <h2>Side Projects</h2>
+                <div class="project-grid">
+                    <div class="row project-item transparentOnStart">
+                        <div class="col-left">
+                            <img src="img/tezdozen.jpg" alt="" srcset="">
+                        </div>
+                        <div class="col-right">
+                            <div class="title">Tez Dozen</div>
+                            <div class="desc">A NFT PFP project on Tezos Chain</div>
+                            <div class="desc">Worked as website backend developer.
+                            </div>
+                            <a href="" class="link">View Project↗</a>
+                        </div>
+                    </div>
+                    <div class="row project-item transparentOnStart">
+                        <div class="col-left">
+                            <img src="img/akaverse.jpg" alt="" srcset="">
+                        </div>
+                        <div class="col-right">
+                            <div class="title">akaVerse</div>
+                            <div class="desc">A 3D virtual NFT gallery platform.</div>
+                            <div class="desc">Worked as application backend developer</div>
+                            <a href="" class="link">View Project↗</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container">
+                <div class="contact-item">
+                    <a href="mailto:timothy950196@gmail.com"><img src="img/mail-icon.svg" alt="" srcset="" class="icon">
+                        timothy950196@gmail.com</a>
+                </div>
+                <div class="copyright">
+                    Copyright © 2022 Timonthy Chen. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
