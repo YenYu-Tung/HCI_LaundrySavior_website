@@ -44,7 +44,6 @@ h2 {
 .about-section h2::before,
 .education-section h2::before,
 .experiences-section h2::before {
-    content: '> ';
     color: #6B7897;
 }
 
@@ -194,6 +193,13 @@ button {
     margin: 0.5rem 0;
     cursor: pointer;
 }
+.top{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
 
 .nav-item {
     margin: 1rem 2rem;
@@ -226,8 +232,13 @@ button {
     background-attachment: fixed;
 }
 
-.banner .intro {
+.banner {
     font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.intro {
+    font-size: 0.5rem;
     font-weight: 700;
 }
 
@@ -293,18 +304,26 @@ button {
     }
 }
 
+.top{
+    display: flex;
+    align-items: center;
+}
 
 .link {
     color: #6B7897;
 }
 
-.education-section,
+.videobox {
+    border-color: #546eec;
+}
+
+.research-section,
 .experiences-section {
     position: relative;
     padding: 5rem 0;
 }
 
-.education-section .deco,
+.research-section .deco,
 .experiences-section .deco {
     position: absolute;
 }
@@ -326,7 +345,7 @@ button {
     z-index: 4;
 }
 
-.education-section .deco:first-child {
+.research-section .deco:first-child {
     background-color: #F2F4F7;
     height: 100%;
     width: 97%;
@@ -335,7 +354,7 @@ button {
     z-index: 2;
 }
 
-.education-section .deco:nth-child(2) {
+.research-section .deco:nth-child(2) {
     background-color: #6B7897;
     height: 100%;
     width: 8%;
@@ -346,21 +365,20 @@ button {
 
 @media screen and (max-width: 1200px) {
 
-    .education-section .deco:nth-child(1),
+    .research-section .deco:nth-child(1),
     .experiences-section .deco:nth-child(1) {
         width: 100%;
         left: 0;
         right: 0;
     }
-
-    .education-section .deco:nth-child(2),
+    .research-section .deco:nth-child(2),
     .experiences-section .deco:nth-child(2) {
         display: none;
     }
 }
 
 .experiences-section .col-left,
-.education-section .col-left {
+.research-section .col-left {
     width: 25rem;
 }
 
@@ -391,12 +409,12 @@ button {
 }
 
 .timeline li>* {
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
 }
 
 .timeline .time {
     color: #6B7897;
-    font-weight: 700;
+    font-weight: 400;
 }
 
 .timeline .title {
@@ -411,7 +429,7 @@ button {
 }
 
 .experiences-section .col-right,
-.education-section .col-right {
+.research-section .col-right {
     width: 55%;
     margin-left: auto;
 }
@@ -549,7 +567,6 @@ button {
 }
 
 .project-item .col-left::before {
-    content: ' ';
     width: 1rem;
     height: 1rem;
     background-color: #6B7897;
@@ -560,7 +577,6 @@ button {
 }
 
 .project-item .col-left::after {
-    content: ' ';
     width: 80%;
     height: 80%;
     position: absolute;
@@ -642,3 +658,4 @@ button {
 .transparentOnStart {
     opacity: 0;
 }
+
