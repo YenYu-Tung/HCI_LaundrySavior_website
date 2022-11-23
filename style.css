@@ -177,7 +177,6 @@ button {
 }
 
 .header .row::before {
-    content: ' ';
     display: block;
     background-color: #6B7897;
     width: 5vw;
