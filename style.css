@@ -17,10 +17,19 @@ body {
     margin: 0;
 }
 
-p {
-    line-height: 1.5em;
-
+p{
+    font-weight: 500;  
+    line-height: 1em;
 }
+.img1{
+   color: #3a9fe9;
+}
+h5{
+    font-weight: 500;
+    line-height: 1em;
+    color: #6B7897;        
+}
+
 
 h1 {
     color: #6B7897;
@@ -31,7 +40,28 @@ h1 {
 h2 {
     font-family: 'Lexend', monospace;
     font-size: 3rem;
+    color: #6B7897;
     width: 100%;
+}
+h3 {
+    font-family: 'Lexend', monospace;
+    font-size: 1.5rem;
+    width: 100%;
+    color: #3a9fe9;
+}
+.feat {
+    font-family: 'Lexend', monospace;
+    width: 100%;
+    color: #3a9fe9;
+    font-size: 2rem;
+    font-weight: 80px;
+}
+.topic {
+    font-family: 'Lexend', monospace;
+    width: 100%;
+    color: #6B7897;
+    font-size: 2rem;
+    font-weight: 80px;
 }
 
 @media screen and (max-width: 768px) {
@@ -62,6 +92,7 @@ h2 {
     width: 100%;
     display: flex;
     flex-direction: column;
+    justify-items: center;
 }
 
 .container {
@@ -73,6 +104,20 @@ h2 {
     margin: 0 auto;
     justify-content: center;
 }
+
+.float .left {
+    float: left;
+}
+    
+.float .center {
+   	margin: 0;
+
+}
+.float .right {
+  	float: right;
+}
+
+
 
 @media screen and (max-width: 1400px) {
     .container {
@@ -101,12 +146,22 @@ h2 {
     }
 }
 
-
+.top .col-right{
+    padding-left: 50px;
+    text-align: left;
+}
+.process .col-right{
+    padding-left: 50px;
+    text-align: left;
+}
 .centered {
-    margin: auto;
+    margin: 50px;
     text-align: center;
 }
-
+.center {
+    margin: 30px;
+    text-align: center;
+}
 .box {
     border: 1px #949FBB;
     position: relative;
@@ -163,7 +218,7 @@ button {
     position: fixed;
     top: 0;
     padding-right: 2rem;
-    padding-top: 1.5rem;
+    padding-top: 0rem;
     z-index: 100;
 }
 
@@ -173,7 +228,12 @@ button {
 }
 
 .header .logo {
+    display: flex;
+    align-items: center;
     margin-right: auto;
+}
+.logo{
+    padding-left: 20px;
 }
 
 .header .row::before {
@@ -192,6 +252,7 @@ button {
     margin: 0.5rem 0;
     cursor: pointer;
 }
+
 .top{
     
     display: flex;
@@ -201,8 +262,9 @@ button {
 }
 
 .nav-item {
-    margin: 1rem 2rem;
+    margin: 2rem 2rem;
     text-transform: uppercase;
+    font-size: medium;
     font-weight: 700;
     cursor: pointer;
 }
@@ -231,13 +293,13 @@ button {
     background-attachment: fixed;
 }
 
+
 .banner {
     font-size: 1.5rem;
     font-weight: 700;
 }
 
 .intro {
-    font-size: 0.5rem;
     font-weight: 700;
 }
 
@@ -319,7 +381,7 @@ button {
 .research-section,
 .experiences-section {
     position: relative;
-    padding: 5rem 0;
+    padding: 5rem 0;    
 }
 
 .research-section .deco,
@@ -383,7 +445,7 @@ button {
 
 .timeline {
     --rightPadding: 5rem;
-    border-left: 1px solid white;
+    border-left: 1px solid #000000;
     list-style: none;
     padding-left: var(--rightPadding);
 }
@@ -396,13 +458,23 @@ button {
     transition: 500ms;
 }
 
-.timeline li::before {
+.timeline .light::before {
     content: ' ';
     display: inline-block;
-    background-color: #6B7897;
+    background-color: #3a9fe9;
     position: absolute;
-    transform: translateY(0%) translateX(-50%) rotate(45deg);
-    left: calc(-1 * var(--rightPadding));
+    left: -5.4rem;
+    border-radius: 50%;
+    width: 0.75rem;
+    height: 0.75rem;
+}
+.timeline .dark::before {
+    content: ' ';
+    display: inline-block;
+    background-color: #546eec;
+    position: absolute;
+    left: -5.4rem;
+    border-radius: 50%;
     width: 0.75rem;
     height: 0.75rem;
 }
@@ -411,13 +483,17 @@ button {
     margin-bottom: 0rem;
 }
 
-.timeline .time {
-    color: #6B7897;
-    font-weight: 400;
-}
 
 .timeline .title {
     font-weight: 700;
+}
+.light{
+    color: #3a9fe9;
+    font-weight: 400;
+}
+.dark{
+    color: #546eec;
+    font-weight: 400;
 }
 
 @media screen and (max-width: 768px) {
@@ -549,6 +625,10 @@ button {
 .project-item {
     padding: 3rem 0.5rem;
 }
+.project-item .div{
+    display: inline-block;
+    max-width: 100px;
+}
 
 .project-item .col-left {
     width: 40%;
@@ -656,5 +736,13 @@ button {
 
 .transparentOnStart {
     opacity: 0;
+}
+.fas{
+    color: #546eec;
+    font-size: 20px;
+}
+.member{
+    padding-left: 200px;
+    padding-right: 200px;
 }
 
