@@ -4,7 +4,7 @@
 color light #F2F4F7 gray #949FBB #6B7897 blue #3a9fe9 #546eec
 **/
 /**
-undone part: btn rwd font 
+undone part: rwd font  feature
 **/
 * {
     box-sizing: border-box;
@@ -13,7 +13,7 @@ undone part: btn rwd font
 }
 
 body {
-    font-weight: 300;
+    font-weight: 500;
     background-color: #F2F4F7;
     color: #546eec;
     font-size: 16px;
@@ -26,25 +26,24 @@ p{
 }
 .img1{
    color: #3a9fe9;
+   font-weight: 500px;
 }
 h5{
     font-weight: 500;
     line-height: 1em;
     color: #6B7897;        
 }
-
-
 h1 {
     color: #6B7897;
     font-family: 'Lexend', monospace;
     font-size: 4rem;
+    font-weight: 500;
 }
-
 h2 {
     font-family: 'Lexend', monospace;
     font-size: 3rem;
     color: #6B7897;
-    width: 100%;
+    width: 100%;    
 }
 h3 {
     font-family: 'Lexend', monospace;
@@ -57,18 +56,34 @@ h3 {
     width: 100%;
     color: #3a9fe9;
     font-size: 2rem;
-    font-weight: 80px;
+    font-weight: 500px;
+}
+.feat .far{
+    padding: 0px 20px;
+    color: #546eec;
 }
 .topic {
     font-family: 'Lexend', monospace;
     width: 100%;
     color: #6B7897;
     font-size: 2rem;
-    font-weight: 80px;
+    font-weight: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.topic i{
+    padding: 0 50px;
+}
+.processtopic{
+    font-family: 'Lexend', monospace;
+    width: 100%;
+    color: #6B7897;
+    font-size: 2rem;
+    font-weight: 120px;
 }
 
 @media screen and (max-width: 768px) {
-
     h2 {
         font-size: 2.5rem;
     }
@@ -114,7 +129,7 @@ h3 {
     
 .float .center {
    	margin: 0;
-    /** rwd: float: left;**/ 
+    /** rwd: float: left; or display: notinline**/ 
 }
 .float .right {
   	float: right;
@@ -162,11 +177,10 @@ h3 {
     
     text-align: right;
 }
-.centered {
-    margin: 50px;
+.centered {    
+    margin-top: 20px;
     text-align: center;
 }
-
 
 .center {
     padding-top: 60px;
@@ -235,6 +249,7 @@ button {
     padding-right: 2rem;
     padding-top: 0rem;
     z-index: 100;
+    box-shadow: 4px 6px 5px -2px #949FBB;
 }
 
 .header.overlay {
@@ -269,11 +284,11 @@ button {
 }
 
 .top{
-    
+    padding-top: 90px;
     display: flex;
     flex-direction: row;
     justify-content: center;
-
+    align-items: center;
 }
 
 .nav-item {
@@ -386,6 +401,9 @@ button {
 
 .link {
     color: #6B7897;
+}
+.video{
+    padding-top: 70px;
 }
 
 .videobox {    
@@ -509,11 +527,11 @@ button {
 }
 .light{
     color: #3a9fe9;
-    font-weight: 400;
+    font-weight: 500;
 }
 .dark{
     color: #546eec;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 @media screen and (max-width: 768px) {
@@ -699,7 +717,8 @@ button {
 }
 .fas{
     color: #546eec;
-    font-size: 20px;
+    font-size: 40px;
+    font-weight: 200;
 }
 
 .first {     
@@ -723,4 +742,56 @@ button {
     max-width: 25%;
  }
 
+.tag {
+    margin-top: auto;
+    color: #949FBB;
+    border: none;
+    padding: 0.25rem 0.25rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    width: fit-content;
+    box-shadow: 4px 6px 5px -2px #949FBB;
+    
+}
 
+.tag:hover{
+    color: #6B7897;
+}
+.tag .fas {
+    font-size: 10px;
+    color: #6B7897;
+}
+a {
+    text-decoration: none
+}
+a:hover {
+   
+    text-decoration: none
+}
+button {
+    cursor: pointer;
+}
+.navbut{   
+    padding: 10px; 
+    width: 105%;
+    height: 90%;
+    text-align: center;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 4px 6px 5px -2px #949FBB;
+}
+.memtopic {
+    font-family: 'Lexend', monospace;
+    width: 100%;
+    color: #6B7897;
+    font-size: 2rem;
+    font-weight: 120px;
+}
+.fa-heart {
+    font-size: 23px;
+    padding: 0px 10px;
+    margin: 0px;
+}
