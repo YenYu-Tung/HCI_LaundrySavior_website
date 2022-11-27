@@ -15,7 +15,7 @@ undone part: rwd font
 body {
     font-weight: 500;
     background-color: #F2F4F7;
-    color: #546eec;
+    color: #3a9fe9;
     font-size: 16px;
     margin: 0;
 }
@@ -25,7 +25,7 @@ p{
     line-height: 1em;
 }
 .img1{
-   color: #3a9fe9;
+   color: #546eec;
    font-weight: 500px;
 }
 h5{
@@ -195,7 +195,7 @@ h3 {
 }
 .ctft{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 .box {
     border: 1px #949FBB;
