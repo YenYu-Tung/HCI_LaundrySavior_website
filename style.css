@@ -67,6 +67,7 @@ h3 {
     font-weight: 500px;
 }
 .feat .far{
+    font-size: 25px;
     padding: 0px 10%;
     color: #546eec;
 }
@@ -165,6 +166,11 @@ h3 {
         width: 960px;
     }
 }
+@media screen and (max-width: 500px) {
+    .feat .far {
+        padding: 0px 4%;
+    }
+}        
 
 @media screen and (max-width: 992px) {
     .container {
@@ -347,9 +353,9 @@ button {
         margin: 1rem 0.5rem;
     }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
     .nav-item {
-        max-width: 80px;
+        max-width: 68px;
         max-height: 45px;
     }
 }
