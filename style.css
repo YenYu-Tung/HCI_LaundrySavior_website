@@ -447,14 +447,23 @@ button {
 }
 
 .videobox {    
-    /**rwd**/    
-    padding: 2% 2% 2% 2%;
+    /**rwd**/   
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;   
     border: 4px #546eec solid;
     border-radius: 20px;
+    
 }
 .vdo{
-    width: 400px;
-    height: 300px;
+    /**rwd**/
+    position: absolute;
+    padding: 3%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .research-section,
