@@ -4,7 +4,7 @@
 color light #F2F4F7 gray #949FBB #6B7897 blue #3a9fe9 #546eec
 **/
 /**
-undone part: rwd font 
+undone part: iframe font 
 **/
 * {
     box-sizing: border-box;
@@ -75,6 +75,10 @@ h3 {
 .topic i{
     padding: 0 50px;
 }
+.process{
+    padding-left: 30px;
+    padding-right: 30px;
+}
 .processtopic{
     font-family: 'Lexend', monospace;
     width: 100%;
@@ -85,7 +89,10 @@ h3 {
 
 @media screen and (max-width: 768px) {
     h2 {
-        font-size: 2.5rem;
+        font-size: 2rem;
+    }
+    h3 {
+        font-size: 1.2rem;
     }
 }
 
@@ -136,8 +143,6 @@ h3 {
   	float: right;
 }
 
-
-
 @media screen and (max-width: 1400px) {
     .container {
         width: 1140px;
@@ -162,6 +167,19 @@ h3 {
         margin: 0 0;
         padding: 0 1rem;
         flex-direction: column;
+    }
+}
+@media screen and (max-width: 768px) {
+    #top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .imgtop{
+        width: 200px;
+    }
+    .top .col-right{
+        padding-left: 0px;
     }
 }
 
@@ -189,8 +207,8 @@ h3 {
     display: flex;
     justify-content: center;
 }
-.centerft {
-    margin-left: 50px;
+.centerft {    
+    padding: 0px 40px;
     text-align: center;
 }
 .ctft{
@@ -316,7 +334,8 @@ button {
 }
 @media screen and (max-width: 768px) {
     .nav-item {
-        display: none;
+        max-width: 80px;
+        max-height: 45px;
     }
 }
 .nav-item.active{
@@ -647,6 +666,7 @@ button {
 }
 
 .side-project-section {
+    padding-top: 6rem;
     padding-bottom: 10rem;
 }
 
@@ -671,6 +691,13 @@ button {
 
 .memimg{
     max-width: 95%;
+}
+.member{
+    padding-left: 13%;
+    padding-right: 13%;
+}
+.centermem{
+    text-align: center;
 }
 
 .footer {
