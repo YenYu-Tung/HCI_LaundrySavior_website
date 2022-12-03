@@ -139,13 +139,13 @@ h3 {
 }
 @media screen and (max-width: 640px) {
     h2 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
     h3 {
         font-size: 1rem;
     }
-    .imgtop {
-        width: 100px;
+    .centered .imgtop {
+        width: 170px;
     }
     .top .col-right{
         margin-left: 0%;
@@ -155,19 +155,8 @@ h3 {
     .top .col-left {
         padding-right: 10px;
     }
+    
 }
-@media screen and (max-width: 640px) {
-    .ftright p {
-        font-size: 17px;
-    }
-    .ftright h5 {
-        font-size: 13px;
-    }
-    .ftright {
-        padding-top: 20%;
-    }
-}
-
 
 .about-section h2::before,
 .education-section h2::before,
@@ -294,37 +283,6 @@ h3 {
 .ctft{
     display: flex;    
     justify-content: space-between;
-}
-.box {
-    border: 1px #949FBB;
-    position: relative;
-}
-
-.box .deco {
-    height: 1rem;
-    width: 1rem;
-    position: absolute;
-    background-color: #6B7897;
-}
-
-.box .deco:first-child {
-    top: -0.5rem;
-    left: -0.5rem;
-}
-
-.box .deco:nth-child(2) {
-    top: -0.5rem;
-    right: -0.5rem;
-}
-
-.box .deco:nth-child(3) {
-    bottom: -0.5rem;
-    left: -0.5rem;
-}
-
-.box .deco:nth-child(4) {
-    bottom: -0.5rem;
-    right: -0.5rem;
 }
 
 .shadow-box {
@@ -853,7 +811,7 @@ button {
     -webkit-background-clip: text;
     color: transparent;
 }
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 640px) {
     .ctft{
         display: grid;        
         align-items: center;
@@ -873,23 +831,22 @@ button {
         justify-content: center;
         display: flex;
     }
-    .ftright{
-        padding-top: 26%;
-        max-width: 40%;
-    }
     .ctft img{
         padding-right: 5%;
         max-width: 60%;
     }
-    .ctft p{
+}
+@media screen and (max-width: 640px) {
+    .ftright p {
+        font-size: 19px;
         text-align: left;
-        font-weight: 700;
-        line-height: 2em;
-        font-size: 21px;
     }
-    .ctft h5{
+    .ftright h5 {
+        font-size: 15px;
         text-align: left;
-        font-size: 16px;
+    }
+    .ftright {
+        padding-top: 25%;
     }
 }
 .ftright{
