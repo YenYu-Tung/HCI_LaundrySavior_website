@@ -83,7 +83,11 @@ h3 {
     font-size: 25px;
     font-weight: 600;
     padding: 0px 10%;
-    color: #547EEC;
+    background: linear-gradient(180deg, #547EEC 0%, #3A9FE9 100%);
+    background: -webkit-linear-gradient(180deg, #547EEC 0%, #3A9FE9 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 }
 .topic {
     font-family: 'Lexend', monospace;
@@ -432,8 +436,7 @@ button {
     background-image: -moz-linear-gradient(180deg, #547EEC 0%,
         #3A9FE9 100%);
     background-image: linear-gradient(180deg, #547EEC 0%,
-        #3A9FE9 100%);
-    
+        #3A9FE9 100%);    
 }
 .vdo{
     /**rwd**/
