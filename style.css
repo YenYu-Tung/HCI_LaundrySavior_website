@@ -76,8 +76,8 @@ h3 {
     font-family: 'Lexend', monospace;
     width: 100%;
     color: #6B7897;
-    font-size: 2rem;
-    font-weight: 500px;
+    font-weight: 700;
+    font-size: 36px;
 }
 .feat .far{
     font-size: 25px;
@@ -93,8 +93,8 @@ h3 {
     font-family: 'Lexend', monospace;
     width: 100%;
     color: #6B7897;
-    font-size: 2rem;
-    font-weight: 120px;
+    font-weight: 700;
+    font-size: 36px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -110,8 +110,15 @@ h3 {
     font-family: 'Lexend', monospace;
     width: 100%;
     color: #6B7897;
-    font-size: 2rem;
-    font-weight: 120px;
+    font-weight: 700;
+    font-size: 36px;
+}
+.memtopic {
+    font-family: 'Lexend', monospace;
+    width: 100%;
+    color: #6B7897;
+    font-size: 36px;
+    font-weight: 700;
 }
 
 @media screen and (max-width: 780px) {
@@ -139,7 +146,7 @@ h3 {
 }
 @media screen and (max-width: 640px) {
     h2 {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
     h3 {
         font-size: 1rem;
@@ -155,7 +162,27 @@ h3 {
     .top .col-left {
         padding-right: 10px;
     }
-    
+    .topic{
+        font-size: 28px;
+    }
+    .feat{
+        font-size: 28px;
+    }
+    .processtopic{
+        font-size: 28px;
+    }
+    .memtopic {
+        font-size: 28px;
+    }
+    .feat .far{
+        font-size: 19px;
+    }
+    .topic .fas{
+        font-size: 35px;
+    }
+    .col-left .fas{
+        font-size: 40px;
+    }    
 }
 
 .about-section h2::before,
@@ -218,7 +245,7 @@ h3 {
 }
 @media screen and (max-width: 500px) {
     .feat .far {
-        padding: 0px 4%;
+        padding: 0px 5%;
     }
 }        
 
@@ -615,6 +642,7 @@ button {
     padding: 3rem;
 }
 
+
 @media screen and (max-width: 768px) {
     .publication-section .shadow-box {
         padding: 2rem;
@@ -794,16 +822,9 @@ button {
     align-items: center;
     justify-content: center;    
 }
-.memtopic {
-    font-family: 'Lexend', monospace;
-    width: 100%;
-    color: #6B7897;
-    font-size: 2rem;
-    font-weight: 120px;
-}
+
 .fa-heart {
     font-size: 23px;
-    padding: 0px 10px;
     margin: 0px;
     background: linear-gradient(180deg, #547EEC 0%, #3A9FE9 100%);
     background: -webkit-linear-gradient(180deg, #547EEC 0%, #3A9FE9 100%);
@@ -846,7 +867,10 @@ button {
         text-align: left;
     }
     .ftright {
-        padding-top: 25%;
+        padding-top: 18%;
+    }
+    .topic i {
+        padding: 0 30px;
     }
 }
 .ftright{
