@@ -25,16 +25,29 @@ body {
 }
 
 p{
-    font-weight: 500;  
-    line-height: 1em;
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 60px;
+}
+.ftright p{
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
 }
 .img1{
    color: #546eec;
    font-weight: 500px;
 }
 h5{
-    font-weight: 500;
-    line-height: 1em;
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
     color: #6B7897;        
 }
 h1 {
@@ -45,16 +58,16 @@ h1 {
 }
 h2 {
     font-family: 'Lexend', monospace;
-    font-size: 3rem;
+    font-size: 3.2rem;
     color: #6B7897;
     width: 100%;    
 }
 h3 {
-    font-family: 'Lexend', monospace;
-    font-size: 1.5rem;
+    font-family: 'Lexend';
+    font-size: 2rem;
     width: 100%;
-    background: linear-gradient(to top, #547EEC -5.52%, #3A9FE9 86.56%);
-    background: -webkit-linear-gradient(to top, #547EEC, #3A9FE9);
+    background: linear-gradient(180deg, #547EEC 0%, #3A9FE9 100%);
+    background: -webkit-linear-gradient(180deg, #547EEC 0%, #3A9FE9 100%);;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -62,14 +75,15 @@ h3 {
 .feat {
     font-family: 'Lexend', monospace;
     width: 100%;
-    color: #3a9fe9;
+    color: #6B7897;
     font-size: 2rem;
     font-weight: 500px;
 }
 .feat .far{
     font-size: 25px;
+    font-weight: 600;
     padding: 0px 10%;
-    color: #546eec;
+    color: #547EEC;
 }
 .topic {
     font-family: 'Lexend', monospace;
@@ -96,15 +110,36 @@ h3 {
     font-weight: 120px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 780px) {
     h2 {
         font-size: 2rem;
     }
     h3 {
         font-size: 1.2rem;
     }
-    .navbut{
+    .copyright {
         font-size: 10px;
+    }
+}
+@media screen and (max-width: 750px) {
+    .ftright p {
+        font-size: 20px;
+    }
+    .ftright h5 {
+        font-size: 15px;
+    }
+    .nav-item .navbut {
+        font-size: 12px;
+        height: 100%;
+    }
+}
+@media screen and (max-width: 640px) {
+    .ftright p {
+        font-size: 17px;
+    }
+
+    .ftright h5 {
+        font-size: 13px;
     }
 }
 
@@ -209,11 +244,11 @@ h3 {
     padding-left: 50px;
     text-align: left;
 }
-.process .col-right{
-    padding-left: 50px;
+.process .col-right{    
     text-align: left;
 }
-.process .col-left {    
+.process .col-left {  
+    padding-right: 5rem;
     text-align: right;
 }
 .centered {    
@@ -221,19 +256,12 @@ h3 {
     text-align: center;
 }
 
-.center {
-    padding-top: 60px;
-    margin: 50px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-}
 .centerft {    
     padding: 0px 40px;
     text-align: center;
 }
 .ctft{
-    display: flex;
+    display: flex;    
     justify-content: space-between;
 }
 .box {
@@ -270,7 +298,7 @@ h3 {
 
 .shadow-box {
     border: 1px white solid;
-    box-shadow: #6B7897 20px 20px 0px;
+    box-shadow: -4px -4px 8px #FFFFFF, 4px 4px 12px rgba(148, 159, 187, 0.26);
 }
 
 button {
@@ -283,8 +311,7 @@ button {
 .btn-shadow {
     padding: 1rem 3rem;
     border: 1px white solid;
-    box-shadow: #6B7897 0.5rem 0.5rem 0px;
-
+    box-shadow: 4px 4px 12px rgba(148, 159, 187, 0.26);
 }
 
 .header {
@@ -294,7 +321,7 @@ button {
     padding-right: 2rem;
     padding-top: 0rem;
     z-index: 100;
-    box-shadow: 4px 6px 5px -2px #949FBB;
+    box-shadow: -4px -4px 8px #FFFFFF, 4px 4px 12px rgba(148, 159, 187, 0.26);
 }
 
 .header.overlay {
@@ -328,8 +355,7 @@ button {
     cursor: pointer;
 }
 
-.top{
-    padding-top: 90px;
+.top{    
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -361,6 +387,8 @@ button {
 }
 .nav-item.active{
     color: #6B7897;
+    box-shadow: -4px -4px 8px #FFFFFF, 4px 4px 12px rgba(148, 159, 187, 0.26);
+    border-radius: 21.5px;
 }
 .banner {
     height: 100vh;
@@ -376,68 +404,6 @@ button {
 
 .intro {
     font-weight: 700;
-}
-
-.about-section {
-    padding: 10rem 0;
-}
-
-.about-section .col-left {
-    margin-right: 4rem;
-    max-width: 50%;
-}
-
-.about-section .col-left button {
-    margin-top: 4rem;
-    margin-bottom: 4rem;
-}
-
-
-@media screen and (max-width: 768px) {
-    .about-section .col-left button {
-        width: 100%;
-    }
-}
-
-.skill-table {
-    margin: 3rem;
-    display: grid;
-    grid-template-columns: repeat(3, 12rem);
-}
-
-.skill-table>* {
-    margin: 0.5rem 2rem;
-}
-
-.skill-table ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.skill-table li {
-    margin-bottom: 0.5em;
-}
-
-.table-header {
-    color: #6B7897;
-    font-weight: 700;
-    font-size: 1.25rem;
-}
-
-@media screen and (max-width: 1200px) {
-    .skill-table {
-        margin: 2rem 1rem;
-        grid-template-columns: repeat(3, auto);
-        justify-content: space-around;
-    }
-
-    .skill-table>* {
-        margin: 0.5rem 0rem;
-    }
-
-    .table-header {
-        font-size: 1rem;
-    }
 }
 
 .top{
@@ -457,9 +423,16 @@ button {
     position: relative;
     width: 100%;
     height: 0;
-    padding-bottom: 56.25%;   
-    border: 4px #546eec solid;
-    border-radius: 20px;
+    box-sizing: border-box;
+    padding-bottom: 56.25%;
+    border: 6px solid transparent;
+    border-radius: 23px;
+    background-image: -webkit-linear-gradient(180deg, #547EEC 0%,
+        #3A9FE9 100%);
+    background-image: -moz-linear-gradient(180deg, #547EEC 0%,
+        #3A9FE9 100%);
+    background-image: linear-gradient(180deg, #547EEC 0%,
+        #3A9FE9 100%);
     
 }
 .vdo{
@@ -470,66 +443,16 @@ button {
     left: 0;
     width: 100%;
     height: 100%;
+    border-radius: 23px;
+    background: #F2F4F7;
 }
 
 .research-section,
 .experiences-section {
-    position: relative;
-    padding: 5rem 0;    
+    position: relative;   
 }
-
-.research-section .deco,
-.experiences-section .deco {
-    position: absolute;
-}
-
-.experiences-section .deco:first-child {
-    background-color: #F2F4F7;
-    height: 100%;
-    width: 95%;
-    top: 0rem;
-    right: 0;
-}
-
-.experiences-section .deco:nth-child(2) {
-    background-color: #6B7897;
-    height: 100%;
-    width: 8%;
-    top: 6rem;
-    left: 0px;
-    z-index: 4;
-}
-
-.research-section .deco:first-child {
-    background-color: #F2F4F7;
-    height: 100%;
-    width: 97%;
-    top: 0rem;
-    left: 2;
-    z-index: 2;
-}
-
-.research-section .deco:nth-child(2) {
-    background-color: #6B7897;
-    height: 100%;
-    width: 8%;
-    top: 3rem;
-    right: 0px;
-    z-index: 0;
-}
-
-@media screen and (max-width: 1200px) {
-
-    .research-section .deco:nth-child(1),
-    .experiences-section .deco:nth-child(1) {
-        width: 100%;
-        left: 0;
-        right: 0;
-    }
-    .research-section .deco:nth-child(2),
-    .experiences-section .deco:nth-child(2) {
-        display: none;
-    }
+.experiences-section {
+    padding-top: 5rem;
 }
 
 .experiences-section .col-left,
@@ -582,17 +505,33 @@ button {
 }
 .light{
     color: #3a9fe9;
-    font-weight: 500;
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
 }
 .dark{
     color: #546eec;
-    font-weight: 500;
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
 }
 
 @media screen and (max-width: 768px) {
     .timeline {
-        --rightPadding: 2rem;
+        --rightPadding: 5rem;
         margin-left: 1rem;
+    }
+    .light {
+        font-size: 17px;
+        line-height: 20px;
+    }
+    .dark {       
+        font-size: 17px;
+        line-height: 20px;
     }
 }
 
@@ -691,7 +630,7 @@ button {
 @media screen and (max-width: 768px) {
     .publication-section .shadow-box {
         padding: 2rem;
-        box-shadow: #6B7897 0.5rem 0.5rem 0;
+        box-shadow: -4px -4px 8px #FFFFFF, 4px 4px 12px rgba(148, 159, 187, 0.26);
     }
 }
 
@@ -720,7 +659,7 @@ button {
 }
 
 .memimg{
-    max-width: 95%;
+    max-width: 100%;
 }
 .member{
     padding-left: 13%;
@@ -733,7 +672,8 @@ button {
 .footer {
     width: 100%;
     background-color: #F2F4F7;
-    padding: 2.5rem 0;
+    padding-top: 2.5rem;
+    padding-bottom: 0%;
     color: #949FBB;
     font-weight: 700;
 }
@@ -744,7 +684,12 @@ button {
 }
 
 .copyright {
-    font-size:smaller;
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    color: #949FBB;
 }
 
 .icon {
@@ -761,17 +706,25 @@ button {
         margin-bottom: 1rem;
         text-align: center;
     }
-
     .copyright {
         margin-right: auto;
         text-align: center;
+        font-size: 10px;
     }
 }
 
 @media screen and (max-width: 768px) {
-
     .container>.col-left,
     .container>.col-right {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }                
+}
+@media screen and (max-width: 600px) {
+    .container2>.col-left,
+    .container2>.col-right {
         width: 100%;
         max-width: 100%;
         margin-left: 0;
@@ -785,8 +738,8 @@ button {
 .fas{
     font-size: 40px;
     font-weight: 200;
-    background: linear-gradient(280.04deg, #547EEC -5.52%, #3A9FE9 86.56%);
-    background: -webkit-linear-gradient(280.04deg, #547EEC -5.52%, #3A9FE9 86.56%);
+    background: linear-gradient(180deg, #547EEC 0%, #3A9FE9 100%);
+    background: -webkit-linear-gradient(180deg, #547EEC 0%, #3A9FE9 100%);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -795,17 +748,17 @@ button {
 .first {     
     display: inline;
     float: left;
-    max-width: 25%;
+    max-width: 30%;
 }
 .second {
     display: inline;
     float: left;
-    max-width: 25%;
+    max-width: 30%;
  }
 .third {
     display: inline;
     float: left;
-    max-width: 25%;
+    max-width: 30%;
  }
 .fourth { 
     display: inline;
@@ -822,7 +775,7 @@ button {
     font-size: 0.8rem;
     font-weight: 700;
     width: fit-content;
-    box-shadow: 4px 6px 5px -2px #949FBB;
+    box-shadow: -4px -4px 8px #FFFFFF, 4px 4px 12px rgba(148, 159, 187, 0.26);
     
 }
 
@@ -843,16 +796,16 @@ a:hover {
 button {
     cursor: pointer;
 }
-.navbut{   
+.navbut{  
+    font-weight: 400;
+    font-size: 16px;
     padding: 10px; 
     width: 105%;
     height: 90%;
     text-align: center;  
     display: flex;
     align-items: center;
-    justify-content: center;
-    border-radius: 20px;
-    box-shadow: 4px 6px 5px -2px #949FBB;
+    justify-content: center;    
 }
 .memtopic {
     font-family: 'Lexend', monospace;
@@ -865,4 +818,53 @@ button {
     font-size: 23px;
     padding: 0px 10px;
     margin: 0px;
+    background: linear-gradient(180deg, #547EEC 0%, #3A9FE9 100%);
+    background: -webkit-linear-gradient(180deg, #547EEC 0%, #3A9FE9 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+@media screen and (max-width: 560px) {
+    .ctft{
+        display: grid;        
+        align-items: center;
+    }
+    .ctft .first {
+        max-width: 100%;
+        justify-content: center;
+        display: flex;
+    }    
+    .ctft .second {
+        max-width: 100%;
+        justify-content: center;
+        display: flex;
+    }    
+    .ctft .third {
+        max-width: 100%;
+        justify-content: center;
+        display: flex;
+    }
+    .ftright{
+        padding-top: 26%;
+        max-width: 40%;
+    }
+    .ctft img{
+        padding-right: 5%;
+        max-width: 60%;
+    }
+    .ctft p{
+        text-align: left;
+        font-weight: 700;
+        line-height: 2em;
+        font-size: 21px;
+    }
+    .ctft h5{
+        text-align: left;
+        font-size: 16px;
+    }
+}
+.ftright{
+    width: 80%;
+    display: inline-block;
+    justify-content: center;
 }
