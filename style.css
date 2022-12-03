@@ -138,14 +138,36 @@ h3 {
     }
 }
 @media screen and (max-width: 640px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+    h3 {
+        font-size: 1rem;
+    }
+    .imgtop {
+        width: 100px;
+    }
+    .top .col-right{
+        margin-left: 0%;
+        padding-left: 0%;
+        float: left;
+    }
+    .top .col-left {
+        padding-right: 10px;
+    }
+}
+@media screen and (max-width: 640px) {
     .ftright p {
         font-size: 17px;
     }
-
     .ftright h5 {
         font-size: 13px;
     }
+    .ftright {
+        padding-top: 20%;
+    }
 }
+
 
 .about-section h2::before,
 .education-section h2::before,
@@ -245,10 +267,15 @@ h3 {
 }
 .top .col-right{
     /**rwd: width: 30%;**/    
-    padding-left: 50px;
+    padding-left: 0;
     text-align: left;
 }
-.process .col-right{    
+.top .col-left {
+    /**rwd: width: 30%;**/
+    padding-right: 20px;
+}
+.process .col-right{
+    padding-left: 10%;    
     text-align: left;
 }
 .process .col-left {  
@@ -696,8 +723,7 @@ button {
 }
 
 .icon {
-    height: 1em;
-    margin-right: 0.5rem;
+    height: 1rem;    
 }
 
 @media screen and (max-width: 768px) {
