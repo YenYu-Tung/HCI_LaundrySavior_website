@@ -177,23 +177,23 @@ h3 {
         padding-right: 10px;
     }
     .topic{
-        font-size: 28px;
+        font-size: 26px;
     }
     .feat{
-        font-size: 28px;
+        font-size: 26px;
     }
     .processtopic{
-        font-size: 28px;
+        font-size: 26px;
     }
     .memtopic {
-        font-size: 28px;
+        font-size: 26px;
     }
     .feat .far{
         padding: 1% 8%;
         font-size: 19px;
     }
     .topic .fas{
-        font-size: 30px;
+        font-size: 28px;
     }
     .col-left .fas{
         font-size: 40px;
@@ -202,6 +202,23 @@ h3 {
         padding: 0px 3px;
         font-size: 17px;
     }    
+}@media screen and (max-width: 460px) {
+    .topic {
+        font-size: 24px;
+    }
+    .feat {
+        font-size: 24px;
+    }
+    .processtopic {
+        font-size: 24px;
+    }
+    .memtopic {
+        font-size: 24px;
+    }
+    .topic .fas {
+        font-size: 26px;
+        padding: 0px 25px;
+    }
 }
 
 .about-section h2::before,
