@@ -19,11 +19,10 @@ undone part: iframe font
 body {
     font-weight: 500;
     background-color: #F2F4F7;
-    color: #3a9fe9;
+    color: #6B7897;
     font-size: 16px;
     margin: 0;
 }
-
 p{
     font-family: 'Lexend';
     font-style: normal;
@@ -41,6 +40,10 @@ p{
 .img1{
    color: #546eec;
    font-weight: 500px;
+}
+.imglight {
+    color: #3A9FE9;
+    font-weight: 500px;
 }
 h5{
     font-family: 'Lexend';
@@ -79,15 +82,13 @@ h3 {
     font-weight: 700;
     font-size: 36px;
 }
+.feat{
+    color: #ffffff;
+}
 .feat .far{
     font-size: 25px;
-    font-weight: 600;
-    padding: 0px 10%;
-    background: linear-gradient(180deg, #547EEC 0%, #3A9FE9 100%);
-    background: -webkit-linear-gradient(180deg, #547EEC 0%, #3A9FE9 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
+    padding: 1px 10%;
+    color: #FFFFFF;
 }
 .topic {
     font-family: 'Lexend', monospace;
@@ -112,6 +113,7 @@ h3 {
     color: #6B7897;
     font-weight: 700;
     font-size: 36px;
+    margin-bottom: 0px;
 }
 .memtopic {
     font-family: 'Lexend', monospace;
@@ -132,7 +134,7 @@ h3 {
         font-size: 10px;
     }
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 850px) {
     .ftright p {
         font-size: 20px;
     }
@@ -143,6 +145,18 @@ h3 {
         font-size: 12px;
         height: 100%;
     }
+    .topic{
+        font-size: 28px;
+    }
+    .feat{
+        font-size: 28px;
+    }
+    .processtopic{
+        font-size: 28px;
+    }
+    .memtopic {
+        font-size: 28px;
+    }
 }
 @media screen and (max-width: 640px) {
     h2 {
@@ -152,7 +166,7 @@ h3 {
         font-size: 1rem;
     }
     .centered .imgtop {
-        width: 170px;
+        width: 150px;
     }
     .top .col-right{
         margin-left: 0%;
@@ -175,6 +189,7 @@ h3 {
         font-size: 28px;
     }
     .feat .far{
+        padding: 1% 8%;
         font-size: 19px;
     }
     .topic .fas{
@@ -249,13 +264,13 @@ h3 {
 }
 @media screen and (max-width: 500px) {
     .feat .far {
-        padding: 0px 5%;
+        padding: 1% 5%;
     }
 }        
 
 @media screen and (max-width: 992px) {
     .container {
-        width: 720px;
+        width: 820px;
     }
 }
 
@@ -307,11 +322,34 @@ h3 {
     text-align: center;
 }
 
-.centerft {    
-    padding: 0px 40px;
+.centerft {  
+    padding: 5% 40px 0% 40px;
     text-align: center;
 }
+@media screen and (max-width: 875px) {
+    .centerft .ctft {
+        padding: 0 8%;
+    }
+}
+@media screen and (max-width: 720px) {
+    .centerft .ctft {
+        padding: 0 5%;
+    }
+}
+@media screen and (max-width: 620px) {
+    .centerft .ctft {
+        padding: 0 6%;
+    }
+    .centerft {
+        text-align: center;
+    }
+    .experiences-section {
+        background-position: 0 45px;
+    }
+}
+
 .ctft{
+    padding: 0 16%;
     display: flex;    
     justify-content: space-between;
 }
@@ -326,6 +364,7 @@ button {
     background-color: transparent;
     color: white;
     font-size: 1.25rem;
+    text-align: center;
 }
 
 .btn-shadow {
@@ -388,6 +427,9 @@ button {
     font-size: medium;
     font-weight: 700;
     cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
 }
 @media screen and (max-width: 1200px) {
     .nav-item {
@@ -401,12 +443,13 @@ button {
 }
 @media screen and (max-width: 600px) {
     .nav-item {
+        padding-right: 3px;
         max-width: 68px;
         max-height: 45px;
     }
 }
 .nav-item.active{
-    color: #6B7897;
+    color: #3A9FE9;
     box-shadow: -4px -4px 8px #FFFFFF, 4px 4px 12px rgba(148, 159, 187, 0.26);
     border-radius: 21.5px;
 }
@@ -469,17 +512,19 @@ button {
     position: relative;   
 }
 .experiences-section {
-    padding-top: 5rem;
+    padding: 5rem 0 0 0 ;
+    background-image: url('./img/Intersect.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
-.experiences-section .col-left,
 .research-section .col-left {
     width: 25rem;
 }
 
 .timeline {
     --rightPadding: 5rem;
-    border-left: 1px solid #000000;
+    border-left: 1px solid #949FBB;
     list-style: none;
     padding-left: var(--rightPadding);
 }
@@ -559,7 +604,7 @@ button {
 }
 
 .research-section {
-    padding: 8rem 0;
+    padding: 5rem 0;
 }
 
 .box-grid {
@@ -594,37 +639,6 @@ button {
     }
 }
 
-.research-item {
-    display: flex;
-    flex-direction: column;
-}
-
-.research-item .title {
-    font-size: 1.25rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-}
-
-.research-item .desc {
-    margin-bottom: 3rem;
-}
-
-.research-item .link {
-    margin-top: auto;
-    font-weight: 700;
-}
-
-.research-item .tag {
-    margin-top: auto;
-    color: #6B7897;
-    border: 1px solid #6B7897;
-    padding: 0.25rem 0.5rem;
-    border-radius: 0.5rem;
-    font-size: 0.8rem;
-    font-weight: 700;
-    width: fit-content;
-}
-
 @media screen and (max-width: 768px) {
 
     .research-item .title {
@@ -636,15 +650,6 @@ button {
     }
 }
 
-.publication-section {
-    padding-bottom: 8rem;
-}
-
-.publication-section .shadow-box {
-    padding: 3rem;
-}
-
-
 @media screen and (max-width: 768px) {
     .publication-section .shadow-box {
         padding: 2rem;
@@ -653,15 +658,15 @@ button {
 }
 
 .side-project-section {
-    padding-top: 6rem;
-    padding-bottom: 10rem;
+    padding-top: 2.5rem;
+    padding-bottom: 1rem;
 }
 
 .side-project-section .container {
     flex-wrap: wrap;
 }
 .video {
-    padding-top: 70px;
+    padding-top: 30px;
     padding-left: 25%;
     padding-right: 25%;
 }
@@ -719,7 +724,6 @@ button {
 
 .footer a {
     color: #949FBB;
-
 }
 
 .copyright {
@@ -739,7 +743,6 @@ button {
     .footer .container {
         align-items: center;
     }
-
     .contact-item {
         margin-bottom: 1rem;
         text-align: center;
@@ -752,22 +755,17 @@ button {
 }
 
 @media screen and (max-width: 768px) {
-    .container>.col-left,
+    .container>.col-left{
+        width: 100%;
+        padding-left: 12%;
+        text-align: left;
+    }
     .container>.col-right {
         width: 100%;
         max-width: 100%;
         margin-left: 0;
         margin-right: 0;
     }                
-}
-@media screen and (max-width: 600px) {
-    .container2>.col-left,
-    .container2>.col-right {
-        width: 100%;
-        max-width: 100%;
-        margin-left: 0;
-        margin-right: 0;
-    }
 }
 
 .transparentOnStart {
@@ -890,7 +888,7 @@ button {
         text-align: left;
     }
     .ftright {
-        padding-top: 18%;
+        padding-top: 20%;
     }
     .topic i {
         padding: 0 30px;
@@ -901,3 +899,4 @@ button {
     display: inline-block;
     justify-content: center;
 }
+
