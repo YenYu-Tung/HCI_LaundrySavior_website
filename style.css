@@ -178,10 +178,14 @@ h3 {
         font-size: 19px;
     }
     .topic .fas{
-        font-size: 35px;
+        font-size: 30px;
     }
     .col-left .fas{
         font-size: 40px;
+    }
+    .centermem .fa-heart{
+        padding: 0px 3px;
+        font-size: 17px;
     }    
 }
 
@@ -379,7 +383,7 @@ button {
 }
 
 .nav-item {
-    margin: 2rem 2rem;
+    margin: 1.3rem 2rem;
     text-transform: uppercase;
     font-size: medium;
     font-weight: 700;
@@ -430,9 +434,7 @@ button {
 .link {
     color: #6B7897;
 }
-.video{
-    padding-top: 70px;
-}
+
 
 .videobox {    
     /**rwd**/   
@@ -658,12 +660,33 @@ button {
 .side-project-section .container {
     flex-wrap: wrap;
 }
-
+.video {
+    padding-top: 70px;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+@media screen and (max-width: 1000px) {
+    .video {
+        padding-left: 18%;
+        padding-right: 18%;
+    }
+}
+@media screen and (max-width: 900px) {
+    .video {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+}
 @media screen and (max-width: 768px) {
     .project-grid {
         grid-template-columns: repeat(1, 1fr);
     }
+    .video {
+        padding-left: 8%;
+        padding-right: 8%;
+    }
 }
+
 .project-grid{
     padding-top: 20px;
     padding-left: 13%;
@@ -675,7 +698,7 @@ button {
 }
 
 .memimg{
-    max-width: 100%;
+    max-width: 90%;
 }
 .member{
     padding-left: 13%;
@@ -824,7 +847,7 @@ button {
 }
 
 .fa-heart {
-    font-size: 23px;
+    font-size: 20px;
     margin: 0px;
     background: linear-gradient(180deg, #547EEC 0%, #3A9FE9 100%);
     background: -webkit-linear-gradient(180deg, #547EEC 0%, #3A9FE9 100%);
