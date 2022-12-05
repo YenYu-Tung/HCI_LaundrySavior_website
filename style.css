@@ -217,7 +217,7 @@ h3 {
     }
     .topic .fas {
         font-size: 26px;
-        padding: 0px 25px;
+        padding: 0px 20px;
     }
 }
 
@@ -340,7 +340,7 @@ h3 {
 }
 
 .centerft {  
-    padding: 5% 40px 0% 40px;
+    padding: 0% 40px 0% 40px;
     text-align: center;
 }
 @media screen and (max-width: 875px) {
@@ -353,15 +353,13 @@ h3 {
         padding: 0 5%;
     }
 }
+
 @media screen and (max-width: 620px) {
     .centerft .ctft {
         padding: 0 6%;
     }
     .centerft {
         text-align: center;
-    }
-    .experiences-section {
-        background-position: 0 45px;
     }
 }
 
@@ -529,10 +527,11 @@ button {
     position: relative;   
 }
 .experiences-section {
-    padding: 5rem 0 0 0 ;
+    padding: 10% 0 0 0 ;
     background-image: url('./img/Intersect.svg');
     background-repeat: no-repeat;
     background-size: 100%;
+    background-position: 0 0%;
 }
 
 .research-section .col-left {
