@@ -23,73 +23,104 @@ body {
     font-size: 16px;
     margin: 0;
 }
-p{
+
+p {
     font-family: 'Lexend';
     font-style: normal;
     font-weight: 700;
     font-size: 48px;
     line-height: 60px;
 }
-.ftright p{
+
+.ftright p {
     font-family: 'Lexend';
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 30px;
 }
-.img1{
-   color: #546eec;
-   font-weight: 500px;
+
+.img1 {
+    color: #546eec;
+    font-weight: 500px;
 }
+
 .imglight {
     color: #3A9FE9;
     font-weight: 500px;
 }
-h5{
+
+h5 {
     font-family: 'Lexend';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
-    color: #6B7897;        
+    color: #6B7897;
 }
+
 h1 {
     color: #6B7897;
     font-family: 'Lexend', monospace;
     font-size: 4rem;
     font-weight: 500;
 }
+
 h2 {
     font-family: 'Lexend', monospace;
     font-size: 3.2rem;
     color: #6B7897;
-    width: 100%;    
+    width: 100%;
 }
+
 h3 {
     font-family: 'Lexend';
     font-size: 2rem;
     width: 100%;
     background: linear-gradient(180deg, #547EEC 0%, #3A9FE9 100%);
-    background: -webkit-linear-gradient(180deg, #547EEC 0%, #3A9FE9 100%);;
+    background: -webkit-linear-gradient(180deg, #547EEC 0%, #3A9FE9 100%);
+    ;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
 }
+
 .feat {
     font-family: 'Lexend', monospace;
     width: 100%;
     color: #6B7897;
     font-weight: 700;
     font-size: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.feat{
+
+.feat {
     color: #ffffff;
 }
-.feat .far{
-    font-size: 25px;
-    padding: 1px 10%;
-    color: #FFFFFF;
+.feat .svg1 {
+    padding-left: 5px;
+    padding-top: 9px;
+    margin-right: 0px;
 }
+.feat .svg2 {
+    padding-right: 18px;
+    margin-left: 0px;
+    padding-bottom: 20px;
+    margin-right: 5%;
+}
+.feat .svg3 {
+    padding-left: 5px;
+    padding-right: 0;
+    padding-bottom: 27px;
+    margin-left: 5%;
+}
+.feat .svg4 {
+    padding-right: 18px;
+    padding-top: 2px;
+}
+
 .topic {
     font-family: 'Lexend', monospace;
     width: 100%;
@@ -100,14 +131,17 @@ h3 {
     justify-content: center;
     align-items: center;
 }
-.topic i{
+
+.topic i {
     padding: 0 50px;
 }
-.process{
+
+.process {
     padding-left: 30px;
     padding-right: 30px;
 }
-.processtopic{
+
+.processtopic {
     font-family: 'Lexend', monospace;
     width: 100%;
     color: #6B7897;
@@ -115,6 +149,7 @@ h3 {
     font-size: 36px;
     margin-bottom: 0px;
 }
+
 .memtopic {
     font-family: 'Lexend', monospace;
     width: 100%;
@@ -127,94 +162,122 @@ h3 {
     h2 {
         font-size: 2rem;
     }
+
     h3 {
         font-size: 1.2rem;
     }
+
     .copyright {
         font-size: 10px;
     }
 }
+
 @media screen and (max-width: 850px) {
     .ftright p {
         font-size: 20px;
     }
+
     .ftright h5 {
         font-size: 15px;
     }
+
     .nav-item .navbut {
         font-size: 12px;
         height: 100%;
     }
-    .topic{
+
+    .topic {
         font-size: 28px;
     }
-    .feat{
+
+    .feat {
         font-size: 28px;
     }
-    .processtopic{
+
+    .processtopic {
         font-size: 28px;
     }
+
     .memtopic {
         font-size: 28px;
     }
 }
+
 @media screen and (max-width: 640px) {
     h2 {
         font-size: 1.5rem;
     }
+
     h3 {
         font-size: 1rem;
     }
+
     .centered .imgtop {
         width: 150px;
     }
-    .top .col-right{
+
+    .top .col-right {
         margin-left: 0%;
         padding-left: 0%;
         float: left;
     }
+
     .top .col-left {
         padding-right: 10px;
     }
-    .topic{
+
+    .topic {
         font-size: 26px;
     }
-    .feat{
+
+    .feat {
         font-size: 26px;
     }
-    .processtopic{
+
+    .processtopic {
         font-size: 26px;
     }
+
     .memtopic {
         font-size: 26px;
     }
-    .feat .far{
+
+    .feat .far {
         padding: 1% 8%;
         font-size: 19px;
     }
-    .topic .fas{
+
+    .topic .fas {
         font-size: 28px;
     }
-    .col-left .fas{
+
+    .col-left .fas {
         font-size: 40px;
     }
-    .centermem .fa-heart{
+
+    .centermem .fa-heart {
         padding: 0px 3px;
         font-size: 17px;
-    }    
-}@media screen and (max-width: 460px) {
+    }
+}
+
+@media screen and (max-width: 460px) {
     .topic {
         font-size: 24px;
     }
+
     .feat {
         font-size: 24px;
     }
+
     .processtopic {
         font-size: 24px;
     }
+
     .memtopic {
         font-size: 24px;
     }
+
     .topic .fas {
         font-size: 26px;
         padding: 0px 20px;
@@ -259,13 +322,14 @@ h3 {
 .float .left {
     float: left;
 }
-    
+
 .float .center {
-   	margin: 0;
-    /** rwd: float: left; or display: notinline**/ 
+    margin: 0;
+    /** rwd: float: left; or display: notinline**/
 }
+
 .float .right {
-  	float: right;
+    float: right;
 }
 
 @media screen and (max-width: 1400px) {
@@ -279,11 +343,12 @@ h3 {
         width: 960px;
     }
 }
+
 @media screen and (max-width: 500px) {
     .feat .far {
         padding: 1% 5%;
     }
-}        
+}
 
 @media screen and (max-width: 992px) {
     .container {
@@ -299,55 +364,66 @@ h3 {
         flex-direction: column;
     }
 }
+
 @media screen and (max-width: 768px) {
     #top {
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    .imgtop{
+
+    .imgtop {
         width: 200px;
     }
-    .top .col-right{
+
+    .top .col-right {
         padding-left: 0px;
     }
 }
+
 #top {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.top .col-right{
-    /**rwd: width: 30%;**/    
+
+.top .col-right {
+    /**rwd: width: 30%;**/
     padding-left: 0;
     text-align: left;
 }
+
 .top .col-left {
     /**rwd: width: 30%;**/
     padding-right: 20px;
 }
-.process .col-right{
-    padding-left: 10%;    
+
+.process .col-right {
+    padding-left: 10%;
     text-align: left;
 }
-.process .col-left {  
+
+.process .col-left {
     padding-right: 5rem;
     text-align: right;
 }
-.centered {    
+
+.centered {
     margin-top: 20px;
     text-align: center;
 }
 
-.centerft {  
+.centerft {
     padding: 0% 40px 0% 40px;
     text-align: center;
 }
+
 @media screen and (max-width: 875px) {
     .centerft .ctft {
         padding: 0 8%;
     }
 }
+
 @media screen and (max-width: 720px) {
     .centerft .ctft {
         padding: 0 5%;
@@ -358,14 +434,15 @@ h3 {
     .centerft .ctft {
         padding: 0 6%;
     }
+
     .centerft {
         text-align: center;
     }
 }
 
-.ctft{
+.ctft {
     padding: 0 16%;
-    display: flex;    
+    display: flex;
     justify-content: space-between;
 }
 
@@ -408,7 +485,8 @@ button {
     align-items: center;
     margin-right: auto;
 }
-.logo{
+
+.logo {
     padding-left: 20px;
 }
 
@@ -429,7 +507,7 @@ button {
     cursor: pointer;
 }
 
-.top{    
+.top {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -446,16 +524,19 @@ button {
     display: flex;
     align-items: center;
 }
+
 @media screen and (max-width: 1200px) {
     .nav-item {
         margin: 1rem 1rem;
     }
 }
+
 @media screen and (max-width: 992px) {
     .nav-item {
         margin: 1rem 0.5rem;
     }
 }
+
 @media screen and (max-width: 600px) {
     .nav-item {
         padding-right: 3px;
@@ -463,11 +544,13 @@ button {
         max-height: 45px;
     }
 }
-.nav-item.active{
+
+.nav-item.active {
     color: #3A9FE9;
     box-shadow: -4px -4px 8px #FFFFFF, 4px 4px 12px rgba(148, 159, 187, 0.26);
     border-radius: 21.5px;
 }
+
 .banner {
     height: 100vh;
     background: #F2F4F7;
@@ -484,7 +567,7 @@ button {
     font-weight: 700;
 }
 
-.top{
+.top {
     display: flex;
     align-items: center;
 }
@@ -494,8 +577,8 @@ button {
 }
 
 
-.videobox {    
-    /**rwd**/   
+.videobox {
+    /**rwd**/
     position: relative;
     width: 100%;
     height: 0;
@@ -504,13 +587,14 @@ button {
     border: 6px solid transparent;
     border-radius: 23px;
     background-image: -webkit-linear-gradient(180deg, #547EEC 0%,
-        #3A9FE9 100%);
+            #3A9FE9 100%);
     background-image: -moz-linear-gradient(180deg, #547EEC 0%,
-        #3A9FE9 100%);
+            #3A9FE9 100%);
     background-image: linear-gradient(180deg, #547EEC 0%,
-        #3A9FE9 100%);    
+            #3A9FE9 100%);
 }
-.vdo{
+
+.vdo {
     /**rwd**/
     position: absolute;
     padding: 3%;
@@ -524,10 +608,11 @@ button {
 
 .research-section,
 .experiences-section {
-    position: relative;   
+    position: relative;
 }
+
 .experiences-section {
-    padding: 10% 0 0 0 ;
+    padding: 10% 0 0 0;
     background-image: url('./img/Intersect.svg');
     background-repeat: no-repeat;
     background-size: 100%;
@@ -563,6 +648,7 @@ button {
     width: 0.75rem;
     height: 0.75rem;
 }
+
 .timeline .dark::before {
     content: ' ';
     display: inline-block;
@@ -581,7 +667,8 @@ button {
 .timeline .title {
     font-weight: 700;
 }
-.light{
+
+.light {
     color: #3a9fe9;
     font-family: 'Lexend';
     font-style: normal;
@@ -589,7 +676,8 @@ button {
     font-size: 20px;
     line-height: 25px;
 }
-.dark{
+
+.dark {
     color: #546eec;
     font-family: 'Lexend';
     font-style: normal;
@@ -603,11 +691,13 @@ button {
         --rightPadding: 5rem;
         margin-left: 1rem;
     }
+
     .light {
         font-size: 17px;
         line-height: 20px;
     }
-    .dark {       
+
+    .dark {
         font-size: 17px;
         line-height: 20px;
     }
@@ -681,51 +771,59 @@ button {
 .side-project-section .container {
     flex-wrap: wrap;
 }
+
 .video {
     padding-top: 30px;
     padding-left: 25%;
     padding-right: 25%;
 }
+
 @media screen and (max-width: 1000px) {
     .video {
         padding-left: 18%;
         padding-right: 18%;
     }
 }
+
 @media screen and (max-width: 900px) {
     .video {
         padding-left: 15%;
         padding-right: 15%;
     }
 }
+
 @media screen and (max-width: 768px) {
     .project-grid {
         grid-template-columns: repeat(1, 1fr);
     }
+
     .video {
         padding-left: 8%;
         padding-right: 8%;
     }
 }
 
-.project-grid{
+.project-grid {
     padding-top: 20px;
     padding-left: 13%;
     padding-right: 13%;
 }
-.project-item{
+
+.project-item {
     display: flex;
     justify-content: center;
 }
 
-.memimg{
+.memimg {
     max-width: 90%;
 }
-.member{
+
+.member {
     padding-left: 13%;
     padding-right: 13%;
 }
-.centermem{
+
+.centermem {
     text-align: center;
 }
 
@@ -752,17 +850,19 @@ button {
 }
 
 .icon {
-    height: 1rem;    
+    height: 1rem;
 }
 
 @media screen and (max-width: 768px) {
     .footer .container {
         align-items: center;
     }
+
     .contact-item {
         margin-bottom: 1rem;
         text-align: center;
     }
+
     .copyright {
         margin-right: auto;
         text-align: center;
@@ -771,23 +871,25 @@ button {
 }
 
 @media screen and (max-width: 768px) {
-    .container>.col-left{
+    .container>.col-left {
         width: 100%;
         padding-left: 12%;
         text-align: left;
     }
+
     .container>.col-right {
         width: 100%;
         max-width: 100%;
         margin-left: 0;
         margin-right: 0;
-    }                
+    }
 }
 
 .transparentOnStart {
     opacity: 0;
 }
-.fas{
+
+.fas {
     font-size: 40px;
     font-weight: 200;
     background: linear-gradient(180deg, #547EEC 0%, #3A9FE9 100%);
@@ -797,26 +899,29 @@ button {
     color: transparent;
 }
 
-.first {     
+.first {
     display: inline;
     float: left;
     max-width: 30%;
 }
+
 .second {
     display: inline;
     float: left;
     max-width: 30%;
- }
+}
+
 .third {
     display: inline;
     float: left;
     max-width: 30%;
- }
-.fourth { 
+}
+
+.fourth {
     display: inline;
     float: left;
     max-width: 25%;
- }
+}
 
 .tag {
     margin-top: auto;
@@ -828,36 +933,41 @@ button {
     font-weight: 700;
     width: fit-content;
     box-shadow: -4px -4px 8px #FFFFFF, 4px 4px 12px rgba(148, 159, 187, 0.26);
-    
+
 }
 
-.tag:hover{
+.tag:hover {
     color: #6B7897;
 }
+
 .tag .fas {
     font-size: 10px;
     color: #6B7897;
 }
+
 a {
     text-decoration: none
 }
+
 a:hover {
-   
+
     text-decoration: none
 }
+
 button {
     cursor: pointer;
 }
-.navbut{  
+
+.navbut {
     font-weight: 400;
     font-size: 16px;
-    padding: 10px; 
+    padding: 10px;
     width: 105%;
     height: 90%;
-    text-align: center;  
+    text-align: center;
     display: flex;
     align-items: center;
-    justify-content: center;    
+    justify-content: center;
 }
 
 .fa-heart {
@@ -869,50 +979,59 @@ button {
     -webkit-background-clip: text;
     color: transparent;
 }
+
 @media screen and (max-width: 640px) {
-    .ctft{
-        display: grid;        
+    .ctft {
+        display: grid;
         align-items: center;
     }
+
     .ctft .first {
         max-width: 100%;
         justify-content: center;
         display: flex;
-    }    
+    }
+
     .ctft .second {
         max-width: 100%;
         justify-content: center;
         display: flex;
-    }    
+    }
+
     .ctft .third {
         max-width: 100%;
         justify-content: center;
         display: flex;
     }
-    .ctft img{
+
+    .ctft img {
         padding-right: 5%;
         max-width: 60%;
     }
 }
+
 @media screen and (max-width: 640px) {
     .ftright p {
         font-size: 19px;
         text-align: left;
     }
+
     .ftright h5 {
         font-size: 15px;
         text-align: left;
     }
+
     .ftright {
         padding-top: 20%;
     }
+
     .topic i {
         padding: 0 30px;
     }
 }
-.ftright{
+
+.ftright {
     width: 80%;
     display: inline-block;
     justify-content: center;
 }
-

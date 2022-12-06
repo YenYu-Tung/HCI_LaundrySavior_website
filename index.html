@@ -1,280 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">        
-        <script type="text/javascript" src="js/lib/jquery.min.js"></script>
-        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />        
-        <title>Laundry Savior</title>
-    </head>
-    <body>
-        <script>
-            $(document).ready(function () {
-                $('.banner').find('.transparentOnStart').each(function (i) {
-                    $(this).delay(i * 200).animate({ opacity: 100 })
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="js/lib/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <title>Laundry Savior</title>
+</head>
+
+<body>
+    <script>
+        $(document).ready(function () {
+            $('.banner').find('.transparentOnStart').each(function (i) {
+                $(this).delay(i * 200).animate({ opacity: 100 })
+            })
+            $(".logo, .nav-item").each(function (index) {
+                let nav = $(this)
+                let target = $(nav.attr('to'))
+                let sectionTop = target.offset().top
+                nav.click(function () {
+                    $("html, body").animate({ scrollTop: sectionTop })
                 })
-                $(".logo, .nav-item").each(function (index) {
+            })
+            window.addEventListener("scroll", (e) => {
+                let windowCenter = window.scrollY + window.innerHeight / 2
+                $('.nav-item').removeClass('active')
+                $('.nav-item').each(function (index) {
                     let nav = $(this)
                     let target = $(nav.attr('to'))
                     let sectionTop = target.offset().top
-                    nav.click(function () {
-                        $("html, body").animate({scrollTop: sectionTop})
-                    })
+                    let sectionBtm = sectionTop + target.innerHeight()
+                    if (windowCenter > sectionTop && windowCenter < sectionBtm) {
+                        nav.addClass('active')
+                    }
                 })
-                window.addEventListener("scroll", (e) => {
-                    let windowCenter = window.scrollY + window.innerHeight / 2
-                    $('.nav-item').removeClass('active')
-                    $('.nav-item').each(function (index) {
-                        let nav = $(this)
-                        let target = $(nav.attr('to'))
-                        let sectionTop = target.offset().top
-                        let sectionBtm = sectionTop + target.innerHeight()
-                        if (windowCenter > sectionTop && windowCenter < sectionBtm) {
-                            nav.addClass('active')
-                        }
-                    })
-                    $('.section').each(function (index) {
-                        let section = $(this)
-                        let sectionTop = section.offset().top
-                        let sectionBtm = sectionTop + section.innerHeight()
-                        if (windowCenter > sectionTop && windowCenter < sectionBtm) {
-                            section.find('.transparentOnStart').each(function (i) {
-                                $(this).delay(i * 200).animate({ opacity: 100 })
-                            })
-                        }
-                    })
+                $('.section').each(function (index) {
+                    let section = $(this)
+                    let sectionTop = section.offset().top
+                    let sectionBtm = sectionTop + section.innerHeight()
+                    if (windowCenter > sectionTop && windowCenter < sectionBtm) {
+                        section.find('.transparentOnStart').each(function (i) {
+                            $(this).delay(i * 200).animate({ opacity: 100 })
+                        })
+                    }
                 })
             })
-        </script>
-        <div class="header overlay">
-            <div class="row">
-                <div class="logo" to="#Top">
-                    <img src="./img/icon.png" alt="" style="max-width: 60px;">
-                </div>              
-                <a class="nav-item" to="#Experiences">
-                    <div class="navbut">
-                        Features
-                    </div>
-                </a>                    
-                <a class="nav-item" to="#Education">
-                    <div class="navbut">
-                        Concept
-                    </div>
-                </a>
-                <a class="nav-item" to="#Research">
-                    <div class="navbut">
-                        Design Process
-                    </div>                    
-                </a>
-                <a class="nav-item" to="#Side-project">
-                    <div class="navbut">
-                        Members
-                    </div>                    
-                </a>
+        })
+    </script>
+    <div class="header overlay">
+        <div class="row">
+            <div class="logo" to="#Top">
+                <img src="./img/icon.png" alt="" style="max-width: 60px;">
+            </div>
+            <a class="nav-item" to="#Experiences">
+                <div class="navbut">
+                    Features
+                </div>
+            </a>
+            <a class="nav-item" to="#Education">
+                <div class="navbut">
+                    Concept
+                </div>
+            </a>
+            <a class="nav-item" to="#Research">
+                <div class="navbut">
+                    Design Process
+                </div>
+            </a>
+            <a class="nav-item" to="#Side-project">
+                <div class="navbut">
+                    Members
+                </div>
+            </a>
+        </div>
+    </div>
+    <div id="Top" class="section banner">
+        <div class="top container">
+            <div class="centered" id="top">
+                <div class="col-left" style="float: left;">
+                    <img class="imgtop" src="./img/icon.png" alt="" style="max-width: 250px;"
+                        class="transparentOnStart">
+                </div>
+                <div class="col-right" style="float: right;">
+                    <h2 class="name transparentOnStart"> Laundry Savior </h2>
+                    <h3 class="intro transparentOnStart">Chores made easy.</h3>
+                </div>
             </div>
         </div>
-        <div id="Top" class="section banner">
-            <div class="top container">
-                <div class="centered" id="top">
-                    <div class="col-left" style="float: left;">
-                        <img class="imgtop" src="./img/icon.png" alt="" style="max-width: 250px;" class="transparentOnStart">
+    </div>
+    <div id="Experiences" class="section experiences-section">
+        <div class="centerft">
+            <p class="feat">
+                <svg class="svg svg1" width="17" height="30" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="9.5" cy="9.5" r="7.5" stroke="white" stroke-width="3" />
+                </svg>
+                <svg class="svg svg2" width="38" height="60" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="17.7583" y="1" width="26" height="26" rx="3" transform="rotate(40.1324 17.7583 1)" stroke="white"
+                        stroke-width="3" />
+                </svg>
+                Features
+                <svg class="svg svg3" width="20" height="60" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M11.423 3.32408C12.5864 1.37188 15.4136 1.37189 16.577 3.32408L25.1532 17.7142C26.3449 19.7139 24.904 22.25 22.5761 22.25H5.42389C3.09597 22.25 1.65507 19.7139 2.84685 17.7141L11.423 3.32408Z"
+                        stroke="white" stroke-width="3" />
+                </svg>
+                <svg class="svg svg4" width="40" height="23" viewBox="0 0 40 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2" y="2" width="36" height="19" rx="3" stroke="white" stroke-width="3" />
+                </svg>
+            </p>
+            <div class="ctft">
+                <div class="first transparentOnStart">
+                    <img class="memimg" src="img/feature/feature1.png" alt="" srcset="">
+                    <div class="ftright">
+                        <p class="imglight">Dashboard</p>
+                        <h5>Check the status of machines without leaving your room!</h5>
                     </div>
-                    <div class="col-right" style="float: right;">
-                        <h2 class="name transparentOnStart"> Laundry Savior </h2>
-                        <h3 class="intro transparentOnStart">Chores made easy.</h3>
+                </div>
+                <div class="second transparentOnStart">
+                    <img class="memimg" src="img/feature/feature2.png" alt="" srcset="">
+                    <div class="ftright">
+                        <p class="img1">Notification</p>
+                        <h5>Get notified immediately when any machine's available!</h5>
+                    </div>
+                </div>
+                <div class="third transparentOnStart">
+                    <img class="memimg" src="img/feature/feature3.png" alt="" srcset="">
+                    <div class="ftright">
+                        <p class="imglight">E-payment</p>
+                        <h5>Pay with mobile. No more looking for coins!</h5>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="Experiences" class="section experiences-section">
-            <div class="centerft">
-                <p class="feat">
-                    <i class="far fa-dewpoint"></i>
-                    Features
-                    <i class="far fa-fire"></i>
+    </div>
+    <div id="Education" class="section education-section">
+        <div class="centered">
+            <div class="video">
+                <p class="topic">
+                    <i class="fas fa-horizontal-rule"></i>
+                    Concept Video
+                    <i class="fas fa-horizontal-rule"></i>
                 </p>
-                <div class="ctft">
-                    <div class="first transparentOnStart">
-                        <img class="memimg" src="img/feature/feature1.png" alt="" srcset="">
-                        <div class="ftright">
-                            <p class="imglight">Dashboard</p>
-                            <h5>Check the status of machines without leaving your room!</h5>
+                <div class="videobox">
+                    <iframe class="vdo" src="https://www.youtube.com/embed/L0V-Qp5o3ko" title="YouTube video player"
+                        frameborder="0" allowFullScreen="true">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="Research" class="section research-section">
+        <div class="container centered process">
+            <div class="col-left">
+                <p class="processtopic">Design Process</p>
+                <i class="fas fa-horizontal-rule"></i>
+            </div>
+            <div class="col-right">
+                <ul class="timeline transparentOnStart">
+                    <li class="transparentOnStart">
+                        <div class="light">#1 Need Finding
+                            <a href="./slides/team02_01_needfinding.pdf" target="_blank">
+                                <button class="tag" type="submit">
+                                    PDF
+                                    <i class="fas fa-external-link-alt"></i>
+                                </button>
+                            </a>
                         </div>
+                    </li>
+                    <li class="transparentOnStart">
+                        <div class="dark">#2 Point of View & Experience Prototype
+                            <a href="./slides/team02_02_POV_HMW.pdf" target="_blank">
+                                <button class="tag" type="submit">
+                                    PDF
+                                    <i class="fas fa-external-link-alt"></i>
+                                </button>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="transparentOnStart">
+                        <div class="light">#3 Concept Video
+                            <a href="./slides/team02_03_2022_concept_video.mp4" target="_blank">
+                                <button class="tag" type="submit">
+                                    MP4
+                                    <i class="fas fa-external-link-alt"></i>
+                                </button>
+                            </a>
+                            <a href="./slides/team02_03_LaundrySavior_concept_video_slides.pdf" target="_blank">
+                                <button class="tag" type="submit">
+                                    PDF
+                                    <i class="fas fa-external-link-alt"></i>
+                                </button>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="transparentOnStart">
+                        <div class="dark">#4 Low-fi Prototype
+                            <a href="./slides/team02_04_LaundrySavior_Low-Fi Prototyping and Testing review_slides.pdf"
+                                target="_blank">
+                                <button class="tag" type="submit">
+                                    PDF
+                                    <i class="fas fa-external-link-alt"></i>
+                                </button>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="transparentOnStart">
+                        <div class="light">#5 Medium-fi Prototype v1
+                            <a href="./slides/team02_05_LaundrySavior_Medium-fi prototype (v1)_slides.pdf"
+                                target="_blank">
+                                <button class="tag" type="submit">
+                                    PDF
+                                    <i class="fas fa-external-link-alt"></i>
+                                </button>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="transparentOnStart">
+                        <div class="dark">#6 Group Heuristic Evaluation
+                            <a href="./slides/team02_08_group_heuristic_evaluation.pdf" target="_blank">
+                                <button class="tag" type="submit">
+                                    PDF
+                                    <i class="fas fa-external-link-alt"></i>
+                                </button>
+                            </a>
+
+                        </div>
+                    </li>
+                    <li class="transparentOnStart">
+                        <div class="light">#7 Medium-fi Prototype v2
+                            <a href="./slides/team02_09_LaundrySavior_Medium-fi prototype (v2)_slides.pdf"
+                                target="_blank">
+                                <button class="tag" type="submit">
+                                    PDF
+                                    <i class="fas fa-external-link-alt"></i>
+                                </button>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="transparentOnStart">
+                        <div class="dark">#8 Hi-fi Prototype
+                            <a href="./slides/team02_10_LaundrySavior_Hi-fi Prototype(I)_slides.pdf" target="_blank">
+                                <button class="tag transparentOnStart">
+                                    PDF
+                                    <i class="fas fa-external-link-alt"></i>
+                                </button>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="transparentOnStart">
+                        <div class="light">#9 Usability Testing
+                            <a href="./slides/team02_11_usability_testing_slides.pdf" target="_blank">
+                                <button class="tag" type="submit">
+                                    PDF
+                                    <i class="fas fa-external-link-alt"></i>
+                                </button>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="transparentOnStart">
+                        <div class="dark">#10 Poster, App, High-fi Demo Video</div>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="Side-project" class="section side-project-section">
+        <div class="centermem">
+            <p class="memtopic">Made with <i class="fas fa-heart"></i> by</p>
+            <div class="member">
+                <div class="project-item transparentOnStart">
+                    <div class="first transparentOnStart">
+                        <img class="memimg" src="img/team_member/jwf.png" alt="" srcset="">
                     </div>
                     <div class="second transparentOnStart">
-                        <img class="memimg" src="img/feature/feature2.png" alt="" srcset="">
-                        <div class="ftright">
-                            <p class="img1">Notification</p>
-                            <h5>Get notified immediately when any machine's available!</h5>
-                        </div>
+                        <img class="memimg" src="img/team_member/sl.png" alt="" srcset="">
                     </div>
                     <div class="third transparentOnStart">
-                        <img class="memimg" src="img/feature/feature3.png" alt="" srcset="">
-                        <div class="ftright">
-                            <p class="imglight">E-payment</p>
-                            <h5>Pay with mobile. No more looking for coins!</h5>
-                        </div>
+                        <img class="memimg" src="img/team_member/jyf.png" alt="" srcset="">
+                    </div>
+                    <div class="fourth transparentOnStart">
+                        <img class="memimg" src="img/team_member/yyt.png" alt="" srcset="">
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="Education" class="section education-section">
-            <div class="centered">
-                <div class="video">
-                    <p class="topic">
-                        <i class="fas fa-horizontal-rule"></i> 
-                        Concept Video 
-                        <i class="fas fa-horizontal-rule"></i>
-                    </p>
-                    <div class="videobox">
-                        <iframe class="vdo" src="https://www.youtube.com/embed/L0V-Qp5o3ko" title="YouTube video player"
-                            frameborder="0" allowFullScreen="true">
-                        </iframe>
-                    </div>
+            <div class="footer">
+                <div class="copyright">
+                    Copyright © 2022 Laundry Savior. All rights reserved.
                 </div>
             </div>
         </div>
-        <div id="Research" class="section research-section">
-            <div class="container centered process">
-                    <div class="col-left">
-                        <p class="processtopic">Design Process</p>
-                        <i class="fas fa-horizontal-rule"></i>
-                    </div>
-                    <div class="col-right">
-                        <ul class="timeline transparentOnStart">
-                            <li class="transparentOnStart">
-                                <div class="light">#1 Need Finding 
-                                    <a href="./slides/team02_01_needfinding.pdf" target="_blank">
-                                        <button class="tag" type="submit">
-                                            PDF
-                                            <i class="fas fa-external-link-alt"></i>
-                                        </button>
-                                    </a>                                    
-                                </div>                                
-                            </li>
-                            <li class="transparentOnStart">
-                                <div class="dark">#2 Point of View & Experience Prototype 
-                                    <a href="./slides/team02_02_POV_HMW.pdf" target="_blank">
-                                        <button class="tag" type="submit">
-                                            PDF
-                                            <i class="fas fa-external-link-alt"></i>
-                                        </button>
-                                    </a>                                    
-                                </div>                
-                            </li>
-                            <li class="transparentOnStart">
-                                <div class="light">#3 Concept Video 
-                                    <a href="./slides/team02_03_2022_concept_video.mp4" target="_blank">
-                                        <button class="tag" type="submit">
-                                            MP4
-                                            <i class="fas fa-external-link-alt"></i>
-                                        </button>
-                                    </a>
-                                    <a href="./slides/team02_03_LaundrySavior_concept_video_slides.pdf" target="_blank">
-                                        <button class="tag" type="submit">
-                                            PDF
-                                            <i class="fas fa-external-link-alt"></i>
-                                        </button>
-                                    </a>                                    
-                                </div>                                
-                            </li>
-                            <li class="transparentOnStart">
-                                <div class="dark">#4 Low-fi Prototype 
-                                    <a href="./slides/team02_04_LaundrySavior_Low-Fi Prototyping and Testing review_slides.pdf" target="_blank">
-                                        <button class="tag" type="submit">
-                                            PDF
-                                            <i class="fas fa-external-link-alt"></i>
-                                        </button>
-                                    </a>                                    
-                                </div>                                
-                            </li>
-                            <li class="transparentOnStart">
-                                <div class="light">#5 Medium-fi Prototype v1
-                                    <a href="./slides/team02_05_LaundrySavior_Medium-fi prototype (v1)_slides.pdf" target="_blank">
-                                        <button class="tag" type="submit">
-                                            PDF
-                                            <i class="fas fa-external-link-alt"></i>
-                                        </button>
-                                    </a>                                    
-                                </div>
-                            </li>
-                            <li class="transparentOnStart">
-                                <div class="dark">#6 Group Heuristic Evaluation 
-                                    <a href="./slides/team02_08_group_heuristic_evaluation.pdf" target="_blank">
-                                        <button class="tag" type="submit">
-                                            PDF
-                                            <i class="fas fa-external-link-alt"></i>
-                                        </button>
-                                    </a>
-                                    
-                                </div>
-                            </li>
-                            <li class="transparentOnStart">
-                                <div class="light">#7 Medium-fi Prototype v2 
-                                    <a href="./slides/team02_09_LaundrySavior_Medium-fi prototype (v2)_slides.pdf" target="_blank">
-                                        <button class="tag" type="submit">
-                                            PDF
-                                            <i class="fas fa-external-link-alt"></i>
-                                        </button>
-                                    </a>                                    
-                                </div>                            
-                            </li>
-                            <li class="transparentOnStart">
-                                <div class="dark">#8 Hi-fi Prototype                                     
-                                    <a href="./slides/team02_10_LaundrySavior_Hi-fi Prototype(I)_slides.pdf" target="_blank">
-                                        <button class="tag transparentOnStart">
-                                            PDF
-                                            <i class="fas fa-external-link-alt"></i>
-                                        </button>
-                                    </a>                                
-                                </div>                            
-                            </li>
-                            <li class="transparentOnStart">
-                                <div class="light">#9 Usability Testing
-                                    <a href="./slides/team02_11_usability_testing_slides.pdf" target="_blank">
-                                        <button class="tag" type="submit">
-                                            PDF
-                                            <i class="fas fa-external-link-alt"></i>
-                                        </button>
-                                    </a>                                    
-                                </div>                            
-                            </li>
-                            <li class="transparentOnStart">
-                                <div class="dark">#10 Poster, App, High-fi Demo Video</div>
-                            
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-        </div>
-        <div id="Side-project" class="section side-project-section">
-            <div class="centermem">
-                <p class="memtopic">Made with <i class="fas fa-heart"></i> by</p> 
-                <div class="member">
-                    <div class="project-item transparentOnStart">
-                        <div class="first transparentOnStart">
-                            <img class="memimg" src="img/team_member/jwf.png" alt="" srcset="">
-                        </div>
-                        <div class="second transparentOnStart">
-                            <img class="memimg" src="img/team_member/sl.png" alt="" srcset="">
-                        </div>
-                        <div class="third transparentOnStart">
-                            <img class="memimg" src="img/team_member/jyf.png" alt="" srcset="">
-                        </div>
-                        <div class="fourth transparentOnStart">
-                            <img class="memimg" src="img/team_member/yyt.png" alt="" srcset="">
-                        </div>
-                    </div>                    
-                </div>
-                <div class="footer">
-                    <div class="copyright">
-                        Copyright © 2022 Laundry Savior. All rights reserved.
-                    </div>
-                </div>
-            </div>            
-        </div>
-    </body>
+    </div>
+</body>
+
 </html>
