@@ -315,7 +315,7 @@ h3 {
     height: 100%;
     display: flex;
     width: 1320px;
-    margin: 0 auto;
+    margin: 0px;
     justify-content: center;
 }
 
@@ -334,13 +334,13 @@ h3 {
 
 @media screen and (max-width: 1400px) {
     .container {
-        width: 1140px;
+        width: 100%;
     }
 }
 
 @media screen and (max-width: 1200px) {
     .container {
-        width: 960px;
+        width: 100%;
     }
 }
 
@@ -352,7 +352,7 @@ h3 {
 
 @media screen and (max-width: 992px) {
     .container {
-        width: 820px;
+        width: 100%;
     }
 }
 
@@ -399,12 +399,12 @@ h3 {
 }
 
 .process .col-right {
-    padding-left: 10%;
+    padding-left: 5%;
     text-align: left;
 }
 
 .process .col-left {
-    padding-right: 5rem;
+    padding-right: 2%;
     text-align: right;
 }
 
