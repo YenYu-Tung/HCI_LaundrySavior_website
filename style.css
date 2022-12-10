@@ -523,7 +523,6 @@ button {
     text-align: center;
     display: flex;
     align-items: center;
-    color: #949FBB;
 }
 
 @media screen and (max-width: 1200px) {
@@ -640,6 +639,7 @@ button {
 }
 
 .timeline .light::before {
+    margin-top: 10px;
     content: ' ';
     display: inline-block;
     background-color: #3a9fe9;
@@ -651,6 +651,7 @@ button {
 }
 
 .timeline .dark::before {
+    margin-top: 10px;
     content: ' ';
     display: inline-block;
     background-color: #546eec;
@@ -675,7 +676,7 @@ button {
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
-    line-height: 25px;
+    line-height: 30px;
 }
 
 .dark {
@@ -684,7 +685,7 @@ button {
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
-    line-height: 25px;
+    line-height: 30px;
 }
 
 @media screen and (max-width: 768px) {
@@ -695,12 +696,12 @@ button {
 
     .light {
         font-size: 17px;
-        line-height: 20px;
+        line-height: 25px;
     }
 
     .dark {
         font-size: 17px;
-        line-height: 20px;
+        line-height: 25px;
     }
 }
 
@@ -934,10 +935,6 @@ button {
     font-weight: 700;
     width: fit-content;
     box-shadow: -4px -4px 8px #FFFFFF, 4px 4px 12px rgba(148, 159, 187, 0.26);
-
-}
-.navbut:hover {
-    color: #6B7897;
 }
 
 .tag:hover {
