@@ -523,6 +523,7 @@ button {
     text-align: center;
     display: flex;
     align-items: center;
+    color: #949FBB;
 }
 
 @media screen and (max-width: 1200px) {
@@ -934,6 +935,9 @@ button {
     width: fit-content;
     box-shadow: -4px -4px 8px #FFFFFF, 4px 4px 12px rgba(148, 159, 187, 0.26);
 
+}
+.navbut:hover {
+    color: #6B7897;
 }
 
 .tag:hover {
