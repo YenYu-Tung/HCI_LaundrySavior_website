@@ -100,6 +100,7 @@ h3 {
     color: #ffffff;
 }
 .feat .svg1 {
+    margin-left: 20px;
     padding-left: 5px;
     padding-top: 9px;
     margin-right: 0px;
@@ -314,7 +315,6 @@ h3 {
     z-index: 5;
     height: 100%;
     display: flex;
-    width: 1320px;
     margin: 0px;
     justify-content: center;
 }
@@ -620,7 +620,7 @@ button {
 }
 
 .research-section .col-left {
-    width: 25rem;
+    width: 45%;
 }
 
 .timeline {
@@ -712,6 +712,7 @@ button {
 }
 
 .research-section {
+    width: 100%;
     padding: 5rem 0;
 }
 
